@@ -1,0 +1,204 @@
+header img {
+    width: 3em;
+}
+
+header a {
+    text-decoration: none;
+    color: #46CD7A;
+    font-family: Nexa Bold;
+    display: inline;
+}
+
+header h1,
+h2 {
+    display: inline;
+}
+
+header h2 {
+    display: block;
+    margin-left: 4em;
+}
+
+nav a {
+    color: #46CD7A;
+    font-family: Nexa Light;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #2E0880;
+}
+
+nav div {
+    font-size: 0.7em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav img {
+    width: 2.1em;
+    height: 2em;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+    padding: 0em 0.5em;
+}
+
+section > a {
+    background: rgb(0, 0, 0, 0.25);
+    color: white;
+    font-family: Nexa Light;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+body > section {
+    position: relative;
+}
+
+body > section:after {
+    background: url(../images/boek2.jpg);
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+[type="search"] {
+    border: 2px solid #B5C1CB;
+    border-radius: 0.7em 0em 0em 0.7em;
+    color: #B3B6B7;
+    font-family: Nexa Light;
+    font-size: 0.9em;
+    margin: 1em 0em 3em 3em;
+    padding: 0.6em;
+    width: 20em;
+}
+
+[type="submit"] {
+    background-color: #46CD7A;
+    border: 2px solid #B5C1CB;
+    padding: 0.5em 0.8em;
+    border-radius: 0em 0.5em 0.5em 0em;
+    color: white;
+    font-size: 1em;
+    font-family: Nexa Bold;
+    margin: -0.3em;
+}
+
+section button {
+    background-color: rgb(255, 42, 106, 0.8);
+    border-radius: 0.5em;
+    border: 1px solid #FF2A6A;
+    color: white;
+    font-family: Nexa Bold;
+    font-size: 1.1em;
+    padding: 0.5em 2em;
+    margin: 0em 5em;
+}
+
+fieldset {
+    background-color: white;
+    border: 2px solid #B5C1CB;
+    border-radius: 0.5em;
+    margin: 1em;
+    width: 9em;
+}
+
+fieldset legend {
+    border: 2px solid #B5C1CB;
+    background-color: white;
+    color: #46CD7A;
+    font-size: 1em;
+    font-family: Nexa Bold;
+    border-radius: 0.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+fieldset img {
+    width: 0.8em;
+    padding: 0em 0em 0em 1em;
+}
+
+fieldset label {
+    color: #46CD7A;
+    font-family: Nexa Light;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 0.2em;
+    cursor: pointer;
+    padding: 0.15em;
+}
+
+fieldset button {
+    background-color: #46CD7A;
+    border: 1px solid #46CD7A;
+    color: white;
+    font-family: Nexa Bold;
+    font-size: 0.85em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 1em 0em 0em 0em;
+    width: 6em;
+}
+
+main h2 {
+    text-decoration: none;
+    font-family: Nexa Light;
+    color: #2E0880;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+article {
+    border: 1px solid #CCCCCC;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    width: 18em;
+    color: #606060;
+    font-family: Nexa Light;
+}
+
+article a:first-of-type {
+    text-decoration: none;
+    font-family: Nexa Bold;
+    color: #2E0880;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.hart {
+    width: 2em;
+    background-color: #FF2A6A;
+    padding: 0.5em 0.6em;
+    border-radius: 0.5em;
+}
+
+article a:nth-of-type(3) {
+    display: inline-block;
+    background-color: #46CD7A;
+    border-radius: 0.5em;
+    color: white;
+    font-family: Nexa Bold;
+    text-decoration: none;
+    padding: 0.9em;
+    margin-top: 0em;
+}
+
+.leesmeer {
+    width: 1.5em;
+    padding: 0em 0em 0em 1em;
+}
