@@ -9,15 +9,7 @@ header a {
     display: inline;
 }
 
-header h1,
-h2 {
-    display: inline;
-}
 
-header h2 {
-    display: block;
-    margin-left: 4em;
-}
 
 nav a {
     color: #46CD7A;
