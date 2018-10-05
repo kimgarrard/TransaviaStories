@@ -8,47 +8,56 @@
     <link rel='stylesheet' href="styles/transavia.css" />
 </head>
 
-<body>
+<body class="bodya">
 
     <header>
-        <a href="overzichtspagina.html" class="titel"><img src="images/logotransavia.png" class="logo" alt="homepagina"><h1>transavia</h1><h2>stories</h2></a>
+        <a href="index.html"><img src="images/logotransavia.png" alt="homepagina"><h1>transavia </h1>
+        <h2>stories</h2></a>
         <nav class="navigatie">
             <ul>
-                <li><a href=""><img src="images/favoriet.png" class="downloads" alt="downloads"> <div>Downloads</div></a></li>
-                <li><a href=""><img src="images/favoriet.png" alt="favorieten" class="favorieten"><div>Favorieten</div></a></li>
-                <li><a href="aanmelden.html"><img src="images/user.png" class="user" alt="profiel"><div>Aanmelden</div></a></li>
+                <li><a href=""><img src="images/download.png" class="downloads" alt=""> <div>Downloads</div></a></li>
+                <li><a href=""><img src="images/favoriet.png" alt="" class="favorieten"><div>Favorieten</div></a></li>
+                <li><a href="aanmelden.html"><img src="images/user.png" class="user" alt=""><div>Aanmelden</div></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="maina">
 
-        <h2>Inloggen</h2>
+        <a href=""> Over ons </a>
 
-        <form>
-            Gebruikersnaam (e-mail)
-            <input type="text"> Wachtwoord:
-            <input type="password">
-            <a href="">Wachtwoord vergeten?</a>
-            <input type="submit" value="Inloggen">
-        </form>
+        <div class="ia">
 
-        <p>Nog geen account?</p>
-        <h2>Aanmelden</h2>
+            <section>
+                <h2>Inloggen</h2>
 
-        <form>
-            <fieldset>
-                <legend>Aanmelden</legend>
-                <label>Voornaam:<input type="text"></label>
-                <label> Achternaam:<input type="text"> </label>
-                <label>Geboortedatum:<input type="date">  </label>
-                <label> E-Mail:<input type="email"> </label>
-                <label> Telefoonnummer:*<input type="tel"> </label>
-                <label> Wachtwoord:<input type="password"> </label>
-                <label>Bevestig wachtwoord:<input type="password"> </label>
-                <input type='submit' value='Volgende'>
-            </fieldset>
-        </form>
+                <form>
+                    <fieldset>
+                        <label>Gebruikersnaam (e-mail): <input type="email"></label>
+                        <label>Wachtwoord:<input type="password"> </label>
+                        <a href="">Wachtwoord vergeten?</a>
+                        <input type='submit' value='Inloggen'>
+                    </fieldset>
+                </form>
+            </section>
+
+
+            <section>
+                <p>Nog geen account?</p>
+                <h2>Aanmelden</h2>
+
+                <form>
+                    <fieldset>
+                        <label>Voornaam + Achternaam:<input type="text"></label>
+                        <label> E-Mail:<input type="email"> </label>
+                        <label> Wachtwoord:<input type="password"> </label>
+                        <label>Bevestig wachtwoord:<input type="password"> </label>
+                        <input type='submit' value='Aanmelden' class="aanmelden">
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
 
     </main>
 
