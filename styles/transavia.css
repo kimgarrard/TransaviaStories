@@ -668,6 +668,56 @@ main > button p {
     }
 }
 
+#verhaal {
+    background-color: #13313B;
+    transition: 0.5s;
+}
 
+@keyframes sprankel {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#verhaal main {
+    position: relative;
+    z-index: -1;
+}
+
+#verhaal main div {
+    position: absolute;
+    top: 0;
+}
+
+#verhaal main > img:first-of-type {
+    animation: infinite;
+    animation-duration: 4s;
+    animation-name: sprankel;
+}
+
+#verhaal main div img {
+    width: 100%;
+    margin-top: 90em;
+}
+
+#verhaal main div {
+    height: 500vh;
+}
+
+#verhaal main div img {
+    position: sticky;
+    top: 0;
+}
 
 /*SLIDER BIJ TELEFOON*/
