@@ -34,6 +34,7 @@ header a:hover svg * {
 
 header {
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -251,6 +252,45 @@ section > div fieldset label {
     display: flex;
 }
 
+body > section > section:nth-of-type(2) {
+    border: 2px solid #CCCCCC;
+    padding: 1em;
+    position: absolute;
+    z-index: 10;
+    margin-top: 0em;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+body > section > section:nth-of-type(2) img {
+    width: 3em;
+    animation: infinite;
+    animation-name: loading;
+    animation-duration: 1.5s;
+}
+
+body > section > section:nth-of-type(2) p {
+    font-family: Nexa Bold;
+    color: #2E0880;
+}
+
+body > section > section:nth-of-type(2) {
+    display: none;
+}
+
 #aanmelden {
     background-color: #46CD7A;
 }
@@ -378,10 +418,11 @@ section > div fieldset label {
     justify-content: center;
 }
 
-main section {
+main > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 4em;
 }
 
 article {
@@ -570,7 +611,11 @@ main > button p {
 
 
 @media (min-width: 30em) {
-    section > div {
+    main section {
+        margin-top: 0em;
+    }
+
+    body > section > div {
         padding: 4em;
     }
 }
@@ -589,6 +634,7 @@ main > button p {
 }
 
 @media (min-width: 20em) {
+
     header {
         display: flex;
     }
@@ -662,22 +708,17 @@ main > button p {
 @media (min-width: 20em) {}
 
 @media (min-width: 80em) {
-    main section {
+    section + main section {
         max-width: 80em;
         margin: auto;
     }
-}
-
-#verhaal {
-    background-color: #13313B;
-    transition: 0.5s;
 }
 
 @keyframes sprankel {
     0% {
         opacity: 0;
     }
-    40% {
+    50% {
         opacity: 1;
     }
 
@@ -690,34 +731,198 @@ main > button p {
     }
 }
 
-#verhaal main {
+@keyframes zweven {
+    50% {
+        transform: translateY(4em);
+    }
+
+    100% {
+        transform: translateY(0em);
+    }
+}
+
+/*
+@keyframes backgroundcolor {
+    50% {
+        background: black;
+    }
+}
+*/
+
+#verhaal section {
+    background-color: #13313B;
+    width: 100%;
+    animation: infinite;
+    animation-name: backgroundcolor;
+    animation-duration: 10s;
+}
+
+
+#verhaal main > button {
+    position: relative;
+}
+
+#verhaal main section {
     position: relative;
     z-index: -1;
 }
 
-#verhaal main div {
+#verhaal main section > img:first-of-type {
+    width: 100%;
+    animation: infinite;
+    animation-duration: 2s;
+    animation-name: sprankel;
     position: absolute;
     top: 0;
 }
 
-#verhaal main > img:first-of-type {
-    animation: infinite;
-    animation-duration: 4s;
-    animation-name: sprankel;
-}
-
-#verhaal main div img {
+#verhaal main section > img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
     width: 100%;
-    margin-top: 90em;
+    height: 100%;
 }
 
-#verhaal main div {
-    height: 500vh;
+.droomdiv {
+    padding-top: 95.4%;
+    position: relative;
+    z-index: 10;
+    height: 200em;
+    width: 100%;
 }
 
-#verhaal main div img {
+.droom {
+    width: 100%;
+    position: sticky;
+    top: 2em;
+    /*    x 0.9542857143*/
+}
+
+.tekst1div {
+    position: relative;
+    top: 0;
+    z-index: 12;
+    height: 100em;
+    width: 100%;
+}
+
+.tekst1 {
+    animation: infinite;
+    animation-duration: 5s;
+    animation-name: zweven;
+    margin-left: 12.5%;
     position: sticky;
     top: 0;
+    width: 33.4%;
+    margin-top: -10em;
+}
+
+.tekst2div {
+    position: relative;
+    top: 0;
+    z-index: 14;
+    height: 100em;
+    width: 100%;
+}
+
+.tekst2 {
+    animation: infinite;
+    animation-duration: 5s;
+    animation-name: zweven;
+    margin-left: 50.5%;
+    position: sticky;
+    top: -1.9%;
+    width: 45.8%;
+}
+
+.tekst3div {
+    position: relative;
+    top: 0;
+    z-index: 14;
+    height: 100em;
+    width: 100%;
+}
+
+.tekst3 {
+    max-width: 38.2%;
+    animation: infinite;
+    animation-duration: 5s;
+    animation-name: zweven;
+    margin-left: 32%;
+    position: sticky;
+    top: -1.9%;
+}
+
+.vogels {
+    margin-top: 19.1%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.replace {
+    display: none;
+}
+
+.hiddenload1,
+.hiddenload2,
+.hiddenload3 {
+    display: none;
+}
+
+#verhaal main button img:nth-of-type(2) {
+    width: 3.8em;
+    margin: -0.5em;
+}
+
+#verhaal li {
+    position: relative;
+}
+
+#verhaal li img {
+    width: 2em;
+    position: absolute;
+    z-index: 10;
+    top: -0.7em;
+    left: 2em;
+}
+
+#verhaal main button img:nth-of-type(3) {
+    width: 3.8em;
+    z-index: 20;
+    top: -1em;
+    left: 1.5em;
+    position: absolute;
+}
+
+
+@keyframes floatload {
+    100% {
+        transform: translate(85em, -48em);
+        width: 0.9em;
+    }
+}
+
+#verhaal main button img:nth-of-type(3) {
+    animation-duration: 1s;
+    animation-name: floatload;
+}
+
+
+@media (min-width: 20em) and (max-width: 47em) {
+    .slider {
+        margin-top: 4em;
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .slider article {
+        flex-shrink: 0;
+        width: 18em;
+    }
 }
 
 /*SLIDER BIJ TELEFOON*/
+
+/*GITHUB FIXEN!!!*/
