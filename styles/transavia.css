@@ -252,7 +252,7 @@ section > div fieldset label {
     display: flex;
 }
 
-body > section > section:nth-of-type(2) {
+.laden {
     border: 2px solid #CCCCCC;
     padding: 1em;
     position: absolute;
@@ -275,20 +275,24 @@ body > section > section:nth-of-type(2) {
     }
 }
 
-body > section > section:nth-of-type(2) img {
+.laden img {
     width: 3em;
     animation: infinite;
     animation-name: loading;
     animation-duration: 1.5s;
 }
 
-body > section > section:nth-of-type(2) p {
+.laden p {
     font-family: Nexa Bold;
     color: #2E0880;
 }
 
-body > section > section:nth-of-type(2) {
+.laden {
     display: none;
+}
+
+.laden.active {
+    display: block;
 }
 
 #aanmelden {
@@ -922,6 +926,8 @@ main > button p {
         width: 18em;
     }
 }
+
+/*OUTLINE NONE*/
 
 /*SLIDER BIJ TELEFOON*/
 
