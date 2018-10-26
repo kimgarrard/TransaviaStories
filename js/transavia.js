@@ -1,12 +1,11 @@
 var legend = document.querySelectorAll('legend');
+var hiddenElement = document.querySelectorAll('.hiddenopt');
 
 for (var i = 0; i < legend.length; i++) {
-    legend[i].addEventListener("click", function dropdown(value) {
-        var hiddenElement = value.toElement.nextElementSibling;
-        hiddenElement.classList.toggle("hidden");
-
-        var parentElement = value.toElement.parentElement;
-        parentElement.classList.toggle("active");
+    legend[i].addEventListener("click", function dropdown(event) {
+        var index = event.target.dataset.dropdown
+        //        hiddenElement.classList.add("active");
+        hiddenElement[index].classList.toggle('hide');
     });
 }
 
@@ -16,7 +15,10 @@ for (var i = 0; i < pastoe.length; i++) {
     pastoe[i].addEventListener('click', function showLoader() {
         var loader = document.querySelector(".laden");
         loader.classList.add("active")
-    })
+        for (var i = 0; i < hiddenElement.length; i++) {
+            hiddenElement[i].classList.add('hide');
+        }
+    });
 }
 
 
