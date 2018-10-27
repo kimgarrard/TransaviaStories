@@ -14,7 +14,19 @@
 
 body {
     margin: 0;
+    padding: 0;
 }
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
 
 header a {
     text-decoration: none;
@@ -106,6 +118,67 @@ main > img {
     width: 100%;
 }
 
+@media (min-width: 20em) {
+
+    header {
+        display: flex;
+    }
+
+    header h1,
+    header h2 {
+        display: none;
+    }
+}
+
+@media (min-width: 24.2em) {
+    header h1,
+    header h2 {
+        display: flex;
+    }
+}
+
+@media (max-width: 26.5em) {
+    header nav li {
+        margin: 0 0.35em;
+        padding: 0em;
+    }
+}
+
+@media (max-width: 27em) {
+    header nav ul {
+        padding: 0em;
+    }
+}
+
+@media (min-width: 20em) and (max-width: 47em) {
+    .slider {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .slider article {
+        flex-shrink: 0;
+        width: 18em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HOME*/
+
 body > section {
     position: relative;
     width: 100%;
@@ -182,12 +255,13 @@ section section button p {
     margin-bottom: 0.2em;
 }
 
-.dropdowns {
+body > section > div {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
     padding-top: 3em;
     max-width: 60rem;
+    padding-bottom: 4em;
 }
 
 .hidden {
@@ -238,6 +312,64 @@ section > div fieldset label {
     display: flex;
 }
 
+.hiddenopt {
+    position: absolute;
+    animation-name: uitklappen;
+    animation-duration: 1s;
+    height: auto;
+    max-height: 100%;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    opacity: 1;
+    font-size: 1em;
+}
+
+:checked + .label {
+    font-family: Nexa Bold;
+    transform: scale(1.08);
+}
+
+.testcb {
+    border: 1.2px solid #B5C1CB;
+    border-radius: 0.4em;
+    margin-right: 0.2em;
+    background-color: white;
+    padding: 0em 0.1em;
+}
+
+.testcb img {
+    visibility: hidden;
+    padding: 0em;
+}
+
+
+:checked + .testcb {
+    border: 1.2px solid #12B54D;
+    border-radius: 0.4em;
+    margin-right: 0.2em;
+}
+
+:checked + .testcb img {
+    visibility: visible;
+    width: 0.8em;
+    animation-name: checkScale;
+    animation-duration: 0.2s;
+}
+
+@keyframes checkScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
 .laden {
     border: 2px solid #CCCCCC;
     padding: 1em;
@@ -256,6 +388,10 @@ section > div fieldset label {
 
 .laden img {
     margin-left: 5.5em;
+    width: 3em;
+    animation: infinite;
+    animation-name: loading;
+    animation-duration: 1.5s;
 }
 
 @keyframes loading {
@@ -268,19 +404,234 @@ section > div fieldset label {
     }
 }
 
-.laden img {
-    width: 3em;
-    animation: infinite;
-    animation-name: loading;
-    animation-duration: 1.5s;
-}
-
 .laden p {
     font-family: Nexa Bold;
     color: #2E0880;
 }
 
 
+main > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main > h1 {
+    font-family: Nexa Bold;
+    color: #2E0880;
+    justify-content: center;
+    margin: 0em;
+}
+
+article {
+    box-sizing: content-box;
+    border: 1px solid #CCCCCC;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    color: #606060;
+    font-family: Nexa Light;
+    width: 18em;
+}
+
+article > img {
+    display: flex;
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+    height: 10em;
+    object-fit: cover;
+    object-position: top;
+}
+
+article h2 {
+    font-family: Nexa Bold;
+    color: #2E0880;
+    margin: 0.5em 0 0.12em 0;
+    font-size: 1.5em;
+}
+
+article footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+article footer img {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+article footer > img {
+    margin: 0em 0em 0em 1.5em;
+}
+
+article footer p {
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+
+article > p {
+    margin: 0em 0em 1em;
+}
+
+article a:first-of-type {
+    text-decoration: none;
+    font-family: Nexa Bold;
+    color: #2E0880;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0em 0.4em 0em 0.6em;
+}
+
+article > div > img {
+    width: 3.3em;
+    height: 2.8em;
+    background-color: #FF2A6A;
+    padding: 0.5em 0.6em;
+    border-radius: 0.5em;
+}
+
+article div p {
+    color: white;
+    font-family: Nexa Bold;
+    font-size: 0.6em;
+    padding-top: 0.5em;
+    margin: 0em;
+}
+
+article div > a {
+    background-color: #46CD7A;
+    border-radius: 0.5em;
+    color: white;
+    font-family: Nexa Bold;
+    text-decoration: none;
+    padding: 0.em;
+    margin-top: 0em;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+article a > img {
+    width: 1.3em;
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 20em) {
+
+    section > section:first-of-type {
+        padding: 4em 1em 0em;
+    }
+
+    section > button {
+        width: 60%;
+    }
+
+}
+
+@media (min-width: 30em) {
+    section + main div {
+        margin-top: 0em;
+    }
+}
+
+@media (min-width: 32em) {
+    section > button {
+        width: 100%;
+        max-width: 15em;
+    }
+
+    [type=search] {
+        max-width: 28.5em;
+    }
+}
+
+@media (min-width: 50em) {
+    [type=search] {
+        max-width: 50em;
+    }
+
+    section > section:first-of-type {
+        margin: 0 9em;
+    }
+}
+
+@media (min-width: 50.1em) {
+    [type=search] {
+        width: 100%;
+    }
+}
+
+@media (min-width: 80em) {
+    section + main div {
+        max-width: 80em;
+        margin: auto;
+    }
+}
+
+@media(min-width: 20em) {
+    legend {
+        width: 6.5em;
+        margin: 0em;
+    }
+
+    .hiddenopt {
+        background-color: white;
+        border: 2px solid #B5C1CB;
+        border-top: none;
+        border-radius: 0.5em;
+        width: 9.5em;
+        font-size: 0.9em;
+        padding: 0.2em;
+        margin-left: -0.2em;
+    }
+
+    .hiddenopt button {
+        margin: 0.5em 0em;
+    }
+}
+
+@media(min-width: 30em) {
+    .hiddenopt {
+        background-color: white;
+        border: 2px solid #B5C1CB;
+        border-top: none;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        width: 10em;
+        font-size: 1em;
+        margin: 0em;
+    }
+
+    legend {
+        width: 10em;
+        margin: 0em;
+        display: flex;
+    }
+}
+
+
+[type=checkbox],
+[type=radio] {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*AANMELDEN*/
 
 #aanmelden {
     background-color: #46CD7A;
@@ -409,130 +760,6 @@ section > div fieldset label {
     justify-content: center;
 }
 
-main > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-main > h1 {
-    font-family: Nexa Bold;
-    color: #2E0880;
-    justify-content: center;
-    margin: 0em;
-}
-
-article {
-    box-sizing: content-box;
-    border: 1px solid #CCCCCC;
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    color: #606060;
-    font-family: Nexa Light;
-    width: 18em;
-}
-
-article > img {
-    display: flex;
-    width: 100%;
-    border-radius: 1em 1em 0 0;
-    height: 10em;
-    object-fit: cover;
-    object-position: top;
-}
-
-article h2 {
-    font-family: Nexa Bold;
-    color: #2E0880;
-    margin: 0.5em 0 0.12em 0;
-    font-size: 1.5em;
-}
-
-article footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-article footer img {
-    width: 1.3em;
-    height: 1.3em;
-}
-
-article footer > img {
-    margin: 0em 0em 0em 1.5em;
-}
-
-article footer p {
-    font-size: 1em;
-    margin-top: 0.2em;
-}
-
-article > p {
-    margin: 0em 0em 1em;
-}
-
-article a:first-of-type {
-    text-decoration: none;
-    font-family: Nexa Bold;
-    color: #2E0880;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding: 0em 0.4em 0em 0.6em;
-}
-
-article > div > img {
-    width: 3.3em;
-    height: 2.8em;
-    background-color: #FF2A6A;
-    padding: 0.5em 0.6em;
-    border-radius: 0.5em;
-}
-
-article div p {
-    color: white;
-    font-family: Nexa Bold;
-    font-size: 0.6em;
-    padding-top: 0.5em;
-    margin: 0em;
-}
-
-article div > a {
-    background-color: #46CD7A;
-    border-radius: 0.5em;
-    color: white;
-    font-family: Nexa Bold;
-    text-decoration: none;
-    padding: 0.em;
-    margin-top: 0em;
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-}
-
-article a > img {
-    width: 1.3em;
-}
-
-article div {
-    display: flex;
-    justify-content: space-between;
-}
-
-main > button {
-    border: 0px;
-    font-family: Nexa Light;
-    font-size: 1em;
-    margin: 1em;
-}
-
-main > button img {
-    width: 2.5em;
-}
-
-main > button p {
-    margin: 0em;
-}
 
 @media (min-width: 48em) {
     #aanmelden main {
@@ -603,98 +830,32 @@ main > button p {
     }
 }
 
-body > section > div {
-    padding: 4em;
+
+
+
+
+
+
+
+
+
+
+
+/*VERHAAL*/
+
+main > button {
+    border: 0px;
+    font-family: Nexa Light;
+    font-size: 1em;
+    margin: 1em;
 }
 
-
-
-@media (min-width: 30em) {
-    section + main div {
-        margin-top: 0em;
-    }
-
-
+main > button img {
+    width: 2.5em;
 }
 
-@media (max-width: 26.5em) {
-    header nav li {
-        margin: 0 0.35em;
-        padding: 0em;
-    }
-}
-
-@media (max-width: 27em) {
-    header nav ul {
-        padding: 0em;
-    }
-}
-
-@media (min-width: 20em) {
-
-    header {
-        display: flex;
-    }
-
-    header h1,
-    header h2 {
-        display: none;
-    }
-
-    section > section:first-of-type {
-        padding: 4em 1em 0em;
-    }
-
-    section > button {
-        width: 60%;
-    }
-
-}
-
-@media (min-width: 24.2em) {
-    header h1,
-    header h2 {
-        display: flex;
-    }
-}
-
-
-@media (min-width: 32em) {
-    section > button {
-        width: 100%;
-        max-width: 15em;
-    }
-}
-
-@media (min-width: 32em) {
-    [type=search] {
-        max-width: 28.5em;
-    }
-}
-
-@media (min-width: 50em) {
-    [type=search] {
-        max-width: 50em;
-    }
-}
-
-@media (min-width: 50.1em) {
-    [type=search] {
-        width: 100%;
-    }
-}
-
-@media (min-width: 50em) {
-    section > section:first-of-type {
-        margin: 0 9em;
-    }
-}
-
-@media (min-width: 80em) {
-    section + main div {
-        max-width: 80em;
-        margin: auto;
-    }
+main > button p {
+    margin: 0em;
 }
 
 @keyframes sprankel {
@@ -897,86 +1058,11 @@ body > section > div {
 }
 
 
-@media (min-width: 20em) and (max-width: 47em) {
-    .slider {
-        display: flex;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-    }
-
-    .slider article {
-        flex-shrink: 0;
-        width: 18em;
-    }
-}
 
 
 
 
-@media(min-width: 20em) {
-    legend {
-        width: 6.5em;
-        margin: 0em;
-    }
 
-    .hiddenopt {
-        background-color: white;
-        border: 2px solid #B5C1CB;
-        border-top: none;
-        border-radius: 0.5em;
-        width: 8.3em;
-        font-size: 0.78em;
-        padding: 0.2em;
-    }
-}
-
-
-
-@media(min-width: 30em) {
-    .hiddenopt {
-        background-color: white;
-        border: 2px solid #B5C1CB;
-        border-top: none;
-        border-radius: 0.5em;
-        padding: 0.3em;
-        width: 9.6em;
-        font-size: 0.85em;
-        margin: 0em 1em;
-    }
-
-    legend {
-        width: 8em;
-        margin: 0em 1em;
-        display: flex;
-    }
-}
-
-
-
-@media(min-width: 48em) {
-    .hiddenopt {
-        background-color: white;
-        border: 2px solid #B5C1CB;
-        border-top: none;
-        border-radius: 0.5em;
-        padding: 0.5em;
-        width: 10em;
-        font-size: 1em;
-        margin: 0em 1em;
-    }
-
-    legend {
-        width: 10em;
-        margin: 0em 1em;
-        display: flex;
-    }
-}
-
-
-[type=checkbox],
-[type=radio] {
-    display: none;
-}
 
 .hide {
     opacity: 0;
@@ -992,68 +1078,7 @@ body > section > div {
 }
 */
 
-.testcb {
-    border: 1.2px solid #B5C1CB;
-    border-radius: 0.4em;
-    margin-right: 0.2em;
-    background-color: white;
-    padding: 0em 0.1em;
-}
-
-.testcb img {
-    visibility: hidden;
-    padding: 0em;
-}
-
-
-:checked + .testcb {
-    border: 1.2px solid #12B54D;
-    border-radius: 0.4em;
-    margin-right: 0.2em;
-}
-
-:checked + .testcb img {
-    visibility: visible;
-    width: 0.8em;
-    animation-name: checkScale;
-    animation-duration: 0.2s;
-}
-
-@keyframes checkScale {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1.2);
-    }
-}
-
-
-
-
-
-.hiddenopt {
-    position: absolute;
-    animation-name: uitklappen;
-    animation-duration: 1s;
-    height: auto;
-    max-height: 100%;
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-    opacity: 1;
-    font-size: 1em;
-}
-
-:checked + .label {
-    font-family: Nexa Bold;
-    transform: scale(1.08);
-}
-
+/*JAVASCRIPT CLASSES*/
 
 .hide {
     opacity: 0;
@@ -1061,20 +1086,6 @@ body > section > div {
     transition: all 0.3s ease-out;
 }
 
-/*
-
-
-.hiddenopt.active {
-    display: block;
-}
-*/
-
 .active {
     display: block;
 }
-
-/*OUTLINE NONE*/
-
-/*SLIDER BIJ TELEFOON*/
-
-/*GITHUB FIXEN!!!*/
