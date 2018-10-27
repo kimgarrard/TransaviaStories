@@ -3,9 +3,9 @@ var hiddenElement = document.querySelectorAll('.hiddenopt');
 
 for (var i = 0; i < legend.length; i++) {
     legend[i].addEventListener("click", function dropdown(event) {
-        var index = event.target.dataset.dropdown
-        //        hiddenElement.classList.add("active");
+        var index = event.target.dataset.dropdown;
         hiddenElement[index].classList.toggle('hide');
+        hiddenElement[index].classList.add('active');
     });
 }
 
@@ -24,14 +24,19 @@ for (var i = 0; i < pastoe.length; i++) {
 function loaddone(value) {
     document.querySelector('.laden').classList.remove('active');
     var results = document.querySelector('main > h1');
-    results.classList.remove('hidden');
+    //    results.classList.remove('hidden');
 }
 
 var myTimer = setInterval(loaddone, 7000);
 
+//pastoe[i].addEventListener('click', loaddone);
+
+//function loaddone() {
+//    document.querySelector('.laden').classList.remove('active');
+//    setTimeout(loaddone() 3000);
+//}
 
 
-var checkbox = document.querySelectorAll("")
 
 
 var downloaden = document.getElementById('knop');
