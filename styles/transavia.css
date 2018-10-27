@@ -308,7 +308,7 @@ section > div fieldset label {
     font-family: Nexa Light;
     margin: 0.3em 0em;
     cursor: pointer;
-    padding: 0.3em 0.15em;
+    padding: 0.5em 0.15em;
     display: flex;
 }
 
