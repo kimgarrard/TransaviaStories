@@ -14,17 +14,24 @@ var pastoe = document.querySelectorAll(".pastoe");
 for (var i = 0; i < pastoe.length; i++) {
     pastoe[i].addEventListener('click', function showLoader() {
         var loader = document.querySelector(".laden");
-        loader.classList.add("active")
+        loader.classList.add("active");
         for (var i = 0; i < hiddenElement.length; i++) {
             hiddenElement[i].classList.add('hide');
         }
     });
 }
 
+function loaddone(value) {
+    document.querySelector('.laden').classList.remove('active');
+    var results = document.querySelector('main > h1');
+    results.classList.remove('hidden');
+}
+
+var myTimer = setInterval(loaddone, 7000);
 
 
 
-
+var checkbox = document.querySelectorAll("")
 
 
 var downloaden = document.getElementById('knop');

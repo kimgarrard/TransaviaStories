@@ -151,7 +151,7 @@ section [type="submit"] {
     font-family: "Nexa Bold";
 }
 
-section section {
+section > section:first-of-type {
     padding: 4em 4em 0em;
 }
 
@@ -187,6 +187,7 @@ section section button p {
     justify-content: space-around;
     margin: 0 auto;
     padding-top: 3em;
+    max-width: 60rem;
 }
 
 .hidden {
@@ -222,10 +223,10 @@ fieldset button {
     border: 1px solid #46CD7A;
     color: white;
     font-family: Nexa Bold;
-    font-size: 0.85em;
+    font-size: 1em;
     border-radius: 0.5em;
     padding: 0.5em;
-    margin: 1em 0em 0em 0em;
+    width: 100%;
 }
 
 section > div fieldset label {
@@ -242,12 +243,19 @@ section > div fieldset label {
     padding: 1em;
     position: absolute;
     z-index: 10;
-    margin-top: 0em;
+    margin-top: 14em;
     background-color: white;
     border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.laden img {
+    margin-left: 5.5em;
 }
 
 @keyframes loading {
@@ -272,11 +280,7 @@ section > div fieldset label {
     color: #2E0880;
 }
 
-.laden {
-    display: none;
-}
-
-.laden.active {
+.active {
     display: block;
 }
 
@@ -411,7 +415,13 @@ main > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 4em;
+}
+
+main > h1 {
+    font-family: Nexa Bold;
+    color: #2E0880;
+    justify-content: center;
+    margin: 0em;
 }
 
 article {
@@ -434,7 +444,7 @@ article > img {
     object-position: top;
 }
 
-article h1 {
+article h2 {
     font-family: Nexa Bold;
     color: #2E0880;
     margin: 0.5em 0 0.12em 0;
@@ -600,7 +610,7 @@ main > button p {
 
 
 @media (min-width: 30em) {
-    main section {
+    section + main div {
         margin-top: 0em;
     }
 
@@ -633,7 +643,7 @@ main > button p {
         display: none;
     }
 
-    section section {
+    section > section:first-of-type {
         padding: 4em 1em 0em;
     }
 
@@ -677,13 +687,13 @@ main > button p {
 }
 
 @media (min-width: 50em) {
-    section section {
+    section > section:first-of-type {
         margin: 0 9em;
     }
 }
 
 @media (min-width: 80em) {
-    section + main section {
+    section + main div {
         max-width: 80em;
         margin: auto;
     }
@@ -848,6 +858,11 @@ main > button p {
 #verhaal main button img:nth-of-type(2) {
     width: 3.8em;
     margin: -0.5em;
+    outline: none;
+}
+
+#verhaal main button {
+    outline: none;
 }
 
 #verhaal li {
@@ -886,7 +901,6 @@ main > button p {
 
 @media (min-width: 20em) and (max-width: 47em) {
     .slider {
-        margin-top: 4em;
         display: flex;
         overflow-x: auto;
         flex-wrap: nowrap;
@@ -912,25 +926,14 @@ main > button p {
         border: 2px solid #B5C1CB;
         border-top: none;
         border-radius: 0.5em;
-        width: 7.6em;
-        font-size: 0.85em;
-        margin: 0em;
-        padding: 0.5em;
-    }
-
-
-}
-
-
-@keyframes uitklappen {
-    0% {
-        height: 0%;
-    }
-
-    100% {
-        height: 100%;
+        width: 8.1em;
+        font-size: 0.8em;
+        padding: 0.2em;
     }
 }
+
+
+
 
 
 @media(min-width: 48em) {
@@ -942,8 +945,6 @@ main > button p {
         padding: 0.5em;
         width: 10em;
         font-size: 1em;
-        animation-name: uitklappen;
-        animation-duration: 1s;
         margin: 0em 1em;
     }
 
@@ -954,9 +955,87 @@ main > button p {
     }
 }
 
-.hide {
+
+[type=checkbox],
+[type=radio] {
     display: none;
 }
+
+.hide {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease-out;
+}
+
+@media (min-width: 20em) and (max-width: 30em) {
+    section + main > div {
+        margin-top: 4em;
+    }
+}
+
+.testcb {
+    border: 1.2px solid #B5C1CB;
+    border-radius: 0.4em;
+    margin-right: 0.2em;
+    background-color: white;
+    padding: 0em 0.1em;
+}
+
+.testcb img {
+    visibility: hidden;
+    padding: 0em;
+}
+
+
+:checked + .testcb {
+    border: 1.2px solid #12B54D;
+    border-radius: 0.4em;
+    margin-right: 0.2em;
+}
+
+:checked + .testcb img {
+    visibility: visible;
+    width: 0.8em;
+    animation-name: checkScale;
+    animation-duration: 0.2s;
+}
+
+@keyframes checkScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+.hiddenopt {
+    position: absolute;
+    animation-name: uitklappen;
+    animation-duration: 1s;
+    height: auto;
+    max-height: 100%;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    opacity: 1;
+}
+
+:checked + .label {
+    font-family: Nexa Bold;
+    transform: scale(1.08);
+}
+
+
+
 
 /*
 
