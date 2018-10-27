@@ -52,9 +52,11 @@ downloaden.addEventListener('click', download);
 document.getElementById('test3').addEventListener('transitionend', stop);
 
 
+downloadText = document.querySelector('main > button:nth-of-type(2)')
 
 function loadaway(value) {
     document.getElementById('test3').classList.add('hidden');
+    //    downloadText.textContent = 'gedownload';
 }
 
 var myTimer = setInterval(loadaway, 2000);
