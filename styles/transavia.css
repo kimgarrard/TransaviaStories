@@ -28,6 +28,10 @@ body {
 
 /*HEADER*/
 
+header {
+    width: 100%;
+}
+
 header a {
     text-decoration: none;
     color: #46CD7A;
@@ -260,7 +264,7 @@ section section button {
     display: flex;
     flex-direction: column;
     background-color: #FF2A6A;
-    border-radius: 1em;
+    border-radius: 0.5em;
     border: 0px solid #FF2A6A;
     color: white;
     font-family: Nexa Bold;
@@ -279,7 +283,7 @@ section section button:after {
     width: 100%;
     height: 100%;
     opacity: 0;
-    border-radius: 1em;
+    border-radius: 0.5em;
     background-color: white;
 }
 
@@ -1021,10 +1025,13 @@ main > button:nth-of-type(2) {
     animation-duration: 2s;
     animation-name: spark;
     position: absolute;
-    top: 0;
 }
 
 #verhaal main section > img:nth-of-type(2) {
+    display: none;
+}
+
+#verhaal main section > img:nth-of-type(3) {
     position: absolute;
     top: 0;
     width: 100%;
@@ -1162,16 +1169,27 @@ main > button:nth-of-type(2) {
 }
 
 @media(min-width: 20em) and (max-width: 47em) {
+    #verhaal main section > img:nth-of-type(2) {
+        width: 100%;
+        animation: infinite;
+        animation-duration: 2s;
+        animation-name: spark;
+        display: block;
+        position: absolute;
+        top: 55%;
+    }
+
     .droomdiv {
-        height: 55em;
+        height: 50em;
     }
 
     .droom {
         position: sticky;
+        padding-top: 1.5em;
     }
 
     .tekst1div {
-        height: 50em;
+        height: 45em;
     }
 
     .tekst1 {
@@ -1181,7 +1199,7 @@ main > button:nth-of-type(2) {
     }
 
     .tekst2div {
-        height: 50em;
+        height: 45em;
     }
 
     .tekst2 {
@@ -1191,7 +1209,7 @@ main > button:nth-of-type(2) {
     }
 
     .tekst3div {
-        height: 50em;
+        height: 45em;
     }
 
     .tekst3 {
