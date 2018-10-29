@@ -958,6 +958,7 @@ main > button img {
     width: 2.5em;
 }
 
+/*
 main > button:nth-of-type(1) {
     display: flex;
     flex-direction: column;
@@ -969,7 +970,7 @@ main > button:nth-of-type(2) {
     flex-direction: column;
     align-items: center;
 }
-
+*/
 
 @keyframes spark {
     0% {
@@ -985,6 +986,19 @@ main > button:nth-of-type(2) {
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.2;
     }
 }
 
@@ -1028,7 +1042,12 @@ main > button:nth-of-type(2) {
 }
 
 #verhaal main section > img:nth-of-type(2) {
-    display: none;
+    animation: infinite;
+    animation-duration: 10s;
+    animation-name: rainbow;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 #verhaal main section > img:nth-of-type(3) {
@@ -1148,35 +1167,45 @@ main > button:nth-of-type(2) {
 }
 
 #verhaal main button img:nth-of-type(3) {
-    width: 3.8em;
+    width: 2em;
     z-index: 20;
-    top: -1em;
-    left: 1.5em;
-    position: absolute;
+    top: -0.1em;
+    left: 89.2%;
+    position: fixed;
 }
-
 
 @keyframes floatload {
     100% {
-        transform: translate(85em, -48em);
+        transform: translate(86em, -52em);
         width: 0.9em;
     }
 }
 
-#verhaal main button img:nth-of-type(3) {
+#verhaal main button img:nth-of-type(4) {
     animation-duration: 1s;
     animation-name: floatload;
+    position: absolute;
+    width: 3.8em;
+    margin-top: -0.5em;
+    margin-left: -3.3em;
+    outline: none;
 }
 
 @media(min-width: 20em) and (max-width: 47em) {
-    #verhaal main section > img:nth-of-type(2) {
-        width: 100%;
-        animation: infinite;
-        animation-duration: 2s;
-        animation-name: spark;
-        display: block;
-        position: absolute;
-        top: 55%;
+
+    #verhaal main section > img:nth-of-type(3) {
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        margin-left: -14%;
+        margin-top: -40%
+    }
+
+    #verhaal main button img:nth-of-type(3) {
+        width: 1.9em;
+        z-index: 20;
+        top: -0.1em;
+        left: 54%;
+        position: fixed;
     }
 
     .droomdiv {
@@ -1195,7 +1224,7 @@ main > button:nth-of-type(2) {
     .tekst1 {
         width: 80%;
         margin-top: 0em;
-        margin-left: 0%;
+        margin-left: -12%;
     }
 
     .tekst2div {
@@ -1205,7 +1234,7 @@ main > button:nth-of-type(2) {
     .tekst2 {
         width: 105%;
         margin-top: 0em;
-        margin-left: 0%;
+        margin-left: 1%;
     }
 
     .tekst3div {
@@ -1215,7 +1244,7 @@ main > button:nth-of-type(2) {
     .tekst3 {
         width: 85%;
         margin-top: 0em;
-        margin-left: 0em;
+        margin-left: -0%;
     }
 
 }
@@ -1257,10 +1286,6 @@ main > button:nth-of-type(2) {
         width: 58%;
         margin-top: 0em;
         margin-left: 24%;
-    }
-
-    #verhaal main section > img:first-of-type {
-        background-repeat: repeat;
     }
 }
 
