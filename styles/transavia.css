@@ -346,7 +346,7 @@ fieldset img {
 
 fieldset button {
     background-color: #46CD7A;
-    border: 1px solid #46CD7A;
+    border: 0px solid #46CD7A;
     color: white;
     font-family: Nexa Bold;
     font-size: 1em;
@@ -439,7 +439,7 @@ section > div fieldset label {
         transform: translate(-50%, -62%);
     }
 
-    70 {
+    80% {
         transform: translate(-50%, -50%);
     }
 }
@@ -546,6 +546,8 @@ article footer > img {
 article footer p {
     font-size: 1em;
     margin-top: 0.2em;
+    margin-bottom: 0em;
+    margin-left: 0.1em;
 }
 
 article > p {
@@ -1035,6 +1037,24 @@ main > button:nth-of-type(2) {
 }
 
 @keyframes float {
+    0% {
+        transform: translateY(4em);
+    }
+
+    50% {
+        transform: translateY(8em);
+    }
+
+    100% {
+        transform: translateY(4em);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0em);
+    }
+
     50% {
         transform: translateY(4em);
     }
@@ -1134,11 +1154,11 @@ main > button:nth-of-type(2) {
 .tekst2 {
     animation: infinite;
     animation-duration: 5s;
-    animation-name: float;
-    margin-left: 50.5%;
+    animation-name: float2;
+    margin-left: 52.8%;
     position: sticky;
     top: -1.9%;
-    width: 45.8%;
+    width: 40.8%;
 }
 
 .tekst3div {
@@ -1150,11 +1170,11 @@ main > button:nth-of-type(2) {
 }
 
 .tekst3 {
-    width: 38.2%;
+    width: 34.2%;
     animation: infinite;
     animation-duration: 5s;
-    animation-name: float;
-    margin-left: 32%;
+    animation-name: float2;
+    margin-left: 34.5%;
     position: sticky;
     top: -1.9%;
 }
@@ -1223,7 +1243,7 @@ main > button:nth-of-type(2) {
     outline: none;
 }
 
-@media(min-width: 20em) and (max-width: 47em) {
+@media(min-width: 20em) and (max-width: 47.9em) {
 
     #verhaal main section > img:nth-of-type(3) {
         transform: scaleY(-1);
@@ -1253,7 +1273,7 @@ main > button:nth-of-type(2) {
     }
 
     .tekst1 {
-        width: 80%;
+        width: 84%;
         margin-top: 0em;
         margin-left: -12%;
     }
@@ -1263,9 +1283,9 @@ main > button:nth-of-type(2) {
     }
 
     .tekst2 {
-        width: 105%;
+        width: 95%;
         margin-top: 0em;
-        margin-left: 1%;
+        margin-left: 5%;
     }
 
     .tekst3div {
@@ -1273,14 +1293,14 @@ main > button:nth-of-type(2) {
     }
 
     .tekst3 {
-        width: 85%;
+        width: 83%;
         margin-top: 0em;
-        margin-left: -0%;
+        margin-left: 2%;
     }
 
 }
 
-@media(min-width: 48em) and (max-width: 59em) {
+@media(min-width: 48em) and (max-width: 79em) {
     .droomdiv {
         height: 110em;
     }
@@ -1296,7 +1316,7 @@ main > button:nth-of-type(2) {
     .tekst1 {
         width: 52%;
         margin-top: 0em;
-        margin-left: 2%;
+        margin-left: 3%;
     }
 
     .tekst2div {
@@ -1304,9 +1324,9 @@ main > button:nth-of-type(2) {
     }
 
     .tekst2 {
-        width: 68%;
+        width: 61%;
         margin-top: 0em;
-        margin-left: 37%;
+        margin-left: 40%;
     }
 
     .tekst3div {
@@ -1314,9 +1334,9 @@ main > button:nth-of-type(2) {
     }
 
     .tekst3 {
-        width: 58%;
+        width: 54%;
         margin-top: 0em;
-        margin-left: 24%;
+        margin-left: 27%;
     }
 }
 

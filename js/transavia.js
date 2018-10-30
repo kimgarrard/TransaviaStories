@@ -51,6 +51,16 @@ for (var i = 0; i < pastoe.length; i++) {
 //}
 
 
+var downloadText = document.querySelector('main > button:nth-of-type(2) span ');
+
+function loadaway(value) {
+    document.querySelector('#verhaal main button img:nth-of-type(4)').classList.add('hidden');
+
+}
+
+function changeWord(value) {
+    downloadText.textContent = 'gedownload';
+}
 
 
 var downloaden = document.getElementById('knop');
@@ -60,17 +70,14 @@ function download(value) {
     document.querySelector('#verhaal main button img:nth-of-type(2)').classList.remove('hiddenload1');
     document.querySelector('#verhaal main button img:nth-of-type(3)').classList.remove('hiddenload2');
     document.querySelector('#verhaal main button img:nth-of-type(4)').classList.remove('hiddenload3');
+    setTimeout(loadaway, 1000);
+    setTimeout(changeWord, 4000);
 }
 
 downloaden.addEventListener('click', download);
-document.getElementById('test3').addEventListener('transitionend', stop);
+//document.getElementById('test3').addEventListener('transitionend', stop);
 
 
-//var downloadText = document.querySelector('main > button:nth-of-type(2) span');
-//
-////function loadaway(value) {
-////    document.querySelector('#verhaal main button img:nth-of-type(4)').classList.add('hidden');
-////    downloadText.textContent = 'gedownload';
-////}
-////
-//////var myTimer = setInterval(loadaway, 2000);
+
+
+//var myTimer = setInterval(loadaway, 2000);
