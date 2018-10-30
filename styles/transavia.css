@@ -51,7 +51,7 @@ header a:hover svg * {
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100%vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -204,6 +204,14 @@ body > section:after {
     min-width: 100%;
     z-index: -1;
     margin-top: 2em;
+}
+
+#home {
+    background-color: #F4E5D9;
+}
+
+article {
+    background-color: white;
 }
 
 [type="search"] {
@@ -414,6 +422,28 @@ section > div fieldset label {
     }
 }
 
+@keyframes loadAnimation {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    20% {
+        transform: translate(-50%, -62%);
+    }
+
+    40% {
+        transform: translate(-50%, -50%);
+    }
+
+    60% {
+        transform: translate(-50%, -62%);
+    }
+
+    70 {
+        transform: translate(-50%, -50%);
+    }
+}
+
 .laden {
     border: 2px solid #CCCCCC;
     padding: 1em;
@@ -427,7 +457,9 @@ section > div fieldset label {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    animation-name: loadAnimation;
+    animation-duration: 1.2s;
 }
 
 .laden img {
@@ -464,7 +496,7 @@ main > h1 {
     font-family: Nexa Bold;
     color: #2E0880;
     justify-content: center;
-    margin: 0em;
+    margin-top: 1em;
 }
 
 article {
@@ -864,7 +896,6 @@ article div {
     justify-content: center;
 }
 
-
 @media (min-width: 48em) {
     #aanmelden main {
         display: flex;
@@ -873,6 +904,7 @@ article div {
         padding-left: 3em;
         padding-right: 3em;
         padding-top: 5em;
+        margin-top: 6em;
     }
 
     #aanmelden main section:first-of-type {
@@ -1194,7 +1226,6 @@ main > button:nth-of-type(2) {
 @media(min-width: 20em) and (max-width: 47em) {
 
     #verhaal main section > img:nth-of-type(3) {
-        -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
         margin-left: -14%;
         margin-top: -40%

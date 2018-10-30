@@ -1,40 +1,54 @@
-//var legend = document.querySelectorAll('legend');
-//var hiddenElement = document.querySelectorAll('.hiddenopt');
+var legend = document.querySelectorAll('legend');
+var hiddenElement = document.querySelectorAll('.hiddenopt');
+
+for (var i = 0; i < legend.length; i++) {
+    legend[i].addEventListener("click", function dropdown(event) {
+        var index = event.target.dataset.dropdown;
+        hiddenElement[index].classList.toggle('hide');
+        hiddenElement[index].classList.add('active');
+    });
+}
+
+var pastoe = document.querySelectorAll(".pastoe");
+var loader = document.querySelector(".laden");
+
+
+function loaddone(value) {
+    document.querySelector('.laden').classList.remove('active');
+}
+
+//var myTimer = setInterval(loaddone, 8000);
+var articles = document.querySelector('.slider');
+var results = document.querySelector('main > h1');
+
+
+
+for (var i = 0; i < pastoe.length; i++) {
+    pastoe[i].addEventListener('click', function showLoader() {
+        loader.classList.add("active");
+        for (var i = 0; i < hiddenElement.length; i++) {
+            hiddenElement[i].classList.add('hide');
+            for (var x = articles.children.length; x >= 0; x--) {
+                articles.appendChild(articles.children[Math.random() * x | 0]);
+                results.classList.remove('hidden');
+                setTimeout(loaddone, 2000);
+            }
+        }
+    });
+}
+
+
+
+
+
+
+
+//pastoe[i].addEventListener('click', loaddone);
 //
-//for (var i = 0; i < legend.length; i++) {
-//    legend[i].addEventListener("click", function dropdown(event) {
-//        var index = event.target.dataset.dropdown;
-//        hiddenElement[index].classList.toggle('hide');
-//        hiddenElement[index].classList.add('active');
-//    });
+//function loaddone() {
+//    document.querySelector('.laden').classList.remove('active');
+//    setTimeout(loaddone() 3000);
 //}
-//
-//var pastoe = document.querySelectorAll(".pastoe");
-//
-//for (var i = 0; i < pastoe.length; i++) {
-//    pastoe[i].addEventListener('click', function showLoader() {
-//        var loader = document.querySelector(".laden");
-//        loader.classList.add("active");
-//        for (var i = 0; i < hiddenElement.length; i++) {
-//            hiddenElement[i].classList.add('hide');
-//        }
-//    });
-//}
-//
-////function loaddone(value) {
-////    document.querySelector('.laden').classList.remove('active');
-////    var results = document.querySelector('main > h1');
-////    results.classList.remove('hidden');
-////}
-////
-////var myTimer = setInterval(loaddone, 7000);
-//
-////pastoe[i].addEventListener('click', loaddone);
-////
-////function loaddone() {
-////    document.querySelector('.laden').classList.remove('active');
-////    setTimeout(loaddone() 3000);
-////}
 
 
 
@@ -52,26 +66,11 @@ downloaden.addEventListener('click', download);
 document.getElementById('test3').addEventListener('transitionend', stop);
 
 
-var downloadText = document.querySelector('main > button:nth-of-type(2) span')
-
-function loadaway(value) {
-    document.querySelector('#verhaal main button img:nth-of-type(4)').classList.add('hidden');
-    downloadText.textContent = 'gedownload';
-}
-
-var myTimer = setInterval(loadaway, 2000);
-
-//function openPopup(){
-//  $.magnificPopup.open({
-//    items: {
-//      src: '#popup',
-//    },
-//    mainClass: 'mfp-newspaper'
-//  });
-//  $("button").prop("disabled", false);
-//}
+//var downloadText = document.querySelector('main > button:nth-of-type(2) span');
 //
-//$("button").on("click", function(){
-//  setTimeout(openPopup, 2000);
-//  $(this).prop("disabled", true);
-//});
+////function loadaway(value) {
+////    document.querySelector('#verhaal main button img:nth-of-type(4)').classList.add('hidden');
+////    downloadText.textContent = 'gedownload';
+////}
+////
+//////var myTimer = setInterval(loadaway, 2000);
