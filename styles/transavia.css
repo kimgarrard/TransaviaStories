@@ -1183,7 +1183,7 @@ main > button:nth-of-type(2) {
     animation: infinite;
     animation-duration: 5s;
     animation-name: float;
-    margin-left: 12.5%;
+    margin-left: 13.5%;
     position: sticky;
     top: 0;
     width: 33.4%;
@@ -1202,7 +1202,7 @@ main > button:nth-of-type(2) {
     animation: infinite;
     animation-duration: 5s;
     animation-name: float2;
-    margin-left: 52.8%;
+    margin-left: 52.7%;
     position: sticky;
     top: -1.9%;
     width: 40.8%;
@@ -1221,7 +1221,7 @@ main > button:nth-of-type(2) {
     animation: infinite;
     animation-duration: 5s;
     animation-name: float2;
-    margin-left: 34.5%;
+    margin-left: 33.5%;
     position: sticky;
     top: -1.9%;
 }
@@ -1322,7 +1322,7 @@ main > button:nth-of-type(2) {
     .tekst1 {
         width: 84%;
         margin-top: 0em;
-        margin-left: -12%;
+        margin-left: -11.9%;
     }
 
     .tekst2div {
@@ -1332,7 +1332,7 @@ main > button:nth-of-type(2) {
     .tekst2 {
         width: 95%;
         margin-top: 0em;
-        margin-left: 5%;
+        margin-left: 4.8%;
     }
 
     .tekst3div {
@@ -1342,7 +1342,7 @@ main > button:nth-of-type(2) {
     .tekst3 {
         width: 83%;
         margin-top: 0em;
-        margin-left: 2%;
+        margin-left: 1.8%;
     }
 
 }
@@ -1363,7 +1363,7 @@ main > button:nth-of-type(2) {
     .tekst1 {
         width: 52%;
         margin-top: 0em;
-        margin-left: 3%;
+        margin-left: 3.1%;
     }
 
     .tekst2div {
@@ -1383,7 +1383,7 @@ main > button:nth-of-type(2) {
     .tekst3 {
         width: 54%;
         margin-top: 0em;
-        margin-left: 27%;
+        margin-left: 25.7%;
     }
 }
 
