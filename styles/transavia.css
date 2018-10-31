@@ -439,9 +439,9 @@ section > div fieldset label {
 }
 
 .laden div:nth-of-type(1) {
-    border: 3px dotted grey;
-    width: 3.5em;
-    height: 3.5em;
+    border: 3px dotted #FF2A6A;
+    width: 4.5em;
+    height: 4.5em;
     border-radius: 100%;
     border-left-color: transparent;
     border-right-color: transparent;
@@ -449,34 +449,88 @@ section > div fieldset label {
     animation: rotateCircle 2s infinite;
     position: absolute;
     top: 0.9em;
-    left: 5.77em;
-    background-color: ghostwhite;
+    left: 5.3em;
+    background-color: #F4E5D9;
 }
 
 .laden div:nth-of-type(2),
 .laden div:nth-of-type(3),
 .laden div:nth-of-type(4) {
     background: #2E0880;
-    box-shadow: 1px 2px 3px grey;
-    height: 20px;
-    width: 8px;
+    height: 1.7em;
+    width: 0.8em;
     display: inline-block;
-    border-radius: 0.2em;
-    margin-top: 1em;
-    animation: books 2s ease infinite;
+    border: 1.5px solid white;
+    border-radius: 0.1em;
+    margin-top: 1.3em;
+    margin-left: -0.1em;
+    animation: books 3s ease infinite;
+}
+
+.laden div:nth-of-type(5) {
+    border: 3px solid brown;
+    width: 3.5em;
+    height: 3.5em;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 4em;
+    left: 5.77em;
+}
+
+.laden div:nth-of-type(2):before,
+.laden div:nth-of-type(3):before,
+.laden div:nth-of-type(4):before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 1.02em;
+    border: 2px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.laden div:nth-of-type(2):after,
+.laden div:nth-of-type(4):after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    left: -0.1em;
+    right: -0.1em;
+    border: 2px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.laden div:nth-of-type(3):after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0.6em;
+    left: 0.1em;
+    right: 0.1em;
+    bottom: 12px;
+    border: 2px solid white;
+    border-radius: 1em;
 }
 
 .laden div:nth-of-type(2) {
     animation-delay: 0ms;
-    margin-left: 5.5em;
+    margin-left: 5.3em;
 }
 
 .laden div:nth-of-type(3) {
-    animation-delay: 150ms;
+    animation-delay: 200ms;
 }
 
 .laden div:nth-of-type(4) {
-    animation-delay: 300ms;
+    animation-delay: 400ms;
 }
 
 @keyframes rotateCircle {
@@ -491,20 +545,15 @@ section > div fieldset label {
 
 @keyframes books {
     0%,
-    40% {
-        transform: translate(0, 0);
-        background-color: lavender;
-    }
-
-    50%,
-    70% {
-        transform: rotate(30deg);
+    20%,
+    100% {
         background-color: #2E0880;
     }
 
-    100% {
-        transform: translate(0, 0);
-        background-color: lavender;
+    40%,
+    50% {
+        transform: rotate(40deg);
+        /*        background-color: #46CD7A;*/
     }
 }
 
@@ -1320,9 +1369,9 @@ main > button:nth-of-type(2) {
     }
 
     .tekst1 {
-        width: 84%;
+        width: 71%;
         margin-top: 0em;
-        margin-left: -11.9%;
+        margin-left: -5%;
     }
 
     .tekst2div {
@@ -1330,9 +1379,9 @@ main > button:nth-of-type(2) {
     }
 
     .tekst2 {
-        width: 95%;
+        width: 93%;
         margin-top: 0em;
-        margin-left: 4.8%;
+        margin-left: 5.7%;
     }
 
     .tekst3div {

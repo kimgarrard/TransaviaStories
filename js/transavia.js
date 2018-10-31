@@ -32,7 +32,7 @@ for (var i = 0; i < pastoe.length; i++) {
             for (var x = articles.children.length; x >= 0; x--) {
                 articles.appendChild(articles.children[Math.random() * x | 0]);
                 results.classList.remove('hidden');
-                setTimeout(loaddone, 3000);
+                //                setTimeout(loaddone, 3000);
             }
         }
     });
