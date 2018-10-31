@@ -51,7 +51,7 @@ header a:hover svg * {
 header {
     position: fixed;
     top: 0;
-    width: 100%vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -87,7 +87,7 @@ header > a img {
 
 nav a {
     color: #46CD7A;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-weight: bold;
     text-decoration: none;
     transition: 0.2s;
@@ -220,7 +220,7 @@ article {
     border: 2px solid #B5C1CB;
     border-radius: 0.7em 0em 0em 0.7em;
     color: #B3B6B7;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-size: 0.9em;
     padding: 0.6em;
     max-width: 50em;
@@ -273,9 +273,9 @@ section section button {
     flex-direction: column;
     background-color: #FF2A6A;
     border-radius: 0.5em;
-    border: 0px solid #FF2A6A;
+    border: 0px solid;
     color: white;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     font-size: 1.2em;
     padding: 0.4em 0em;
     margin: 0 auto 1rem;
@@ -301,7 +301,7 @@ section section button:hover:after {
 }
 
 section section button span {
-    font-family: Nexa light;
+    font-family: "Nexa light";
     font-size: 0.7em;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
@@ -332,7 +332,7 @@ legend {
     background-color: white;
     color: #46CD7A;
     font-size: 1em;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     border-radius: 0.5em;
     padding: 0.5em;
     display: flex;
@@ -346,9 +346,9 @@ fieldset img {
 
 fieldset button {
     background-color: #46CD7A;
-    border: 0px solid #46CD7A;
+    border: 0px solid;
     color: white;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     font-size: 1em;
     border-radius: 0.5em;
     padding: 0.5em;
@@ -358,7 +358,7 @@ fieldset button {
 
 section > div fieldset label {
     color: #46CD7A;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     margin: 0.3em 0em;
     cursor: pointer;
     padding: 0.5em 0.15em;
@@ -377,7 +377,7 @@ section > div fieldset label {
 }
 
 :checked + .label {
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     transform: scale(1.08);
 }
 
@@ -422,28 +422,6 @@ section > div fieldset label {
     }
 }
 
-@keyframes loadAnimation {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-
-    20% {
-        transform: translate(-50%, -62%);
-    }
-
-    40% {
-        transform: translate(-50%, -50%);
-    }
-
-    60% {
-        transform: translate(-50%, -62%);
-    }
-
-    80% {
-        transform: translate(-50%, -50%);
-    }
-}
-
 .laden {
     border: 2px solid #CCCCCC;
     padding: 1em;
@@ -458,8 +436,76 @@ section > div fieldset label {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    animation-name: loadAnimation;
-    animation-duration: 1.2s;
+}
+
+.laden div:nth-of-type(1) {
+    border: 3px dotted grey;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 100%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: rotateCircle 2s infinite;
+    position: absolute;
+    top: 0.9em;
+    left: 5.77em;
+    background-color: ghostwhite;
+}
+
+.laden div:nth-of-type(2),
+.laden div:nth-of-type(3),
+.laden div:nth-of-type(4) {
+    background: #2E0880;
+    box-shadow: 1px 2px 3px grey;
+    height: 20px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 0.2em;
+    margin-top: 1em;
+    animation: books 2s ease infinite;
+}
+
+.laden div:nth-of-type(2) {
+    animation-delay: 0ms;
+    margin-left: 5.5em;
+}
+
+.laden div:nth-of-type(3) {
+    animation-delay: 150ms;
+}
+
+.laden div:nth-of-type(4) {
+    animation-delay: 300ms;
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes books {
+    0%,
+    40% {
+        transform: translate(0, 0);
+        background-color: lavender;
+    }
+
+    50%,
+    70% {
+        transform: rotate(30deg);
+        background-color: #2E0880;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: lavender;
+    }
 }
 
 .laden img {
@@ -481,10 +527,11 @@ section > div fieldset label {
 }
 
 .laden p {
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     color: #2E0880;
+    margin-top: 1.6em;
+    margin-bottom: 0.5em;
 }
-
 
 main > div {
     display: flex;
@@ -493,7 +540,7 @@ main > div {
 }
 
 main > h1 {
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     color: #2E0880;
     justify-content: center;
     margin-top: 1em;
@@ -506,7 +553,7 @@ article {
     padding: 1em;
     margin: 1em;
     color: #606060;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     width: 18em;
 }
 
@@ -523,7 +570,7 @@ article > img {
 }
 
 article h2 {
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     color: #2E0880;
     margin: 0.5em 0 0.12em 0;
     font-size: 1.5em;
@@ -556,7 +603,7 @@ article > p {
 
 article a:first-of-type {
     text-decoration: none;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     color: #2E0880;
     font-weight: bold;
     font-size: 1.5em;
@@ -593,7 +640,7 @@ article > div > img {
 
 article div p {
     color: white;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     font-size: 0.6em;
     padding-top: 0.5em;
     margin: 0em;
@@ -603,9 +650,9 @@ article div > a {
     background-color: #46CD7A;
     border-radius: 0.5em;
     color: white;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     text-decoration: none;
-    padding: 0.em;
+    padding: 0em;
     margin-top: 0em;
     align-items: flex-end;
     display: flex;
@@ -804,7 +851,7 @@ article div {
 #aanmelden main h2 {
     margin-top: 0em;
     color: #2E0880;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     text-align: center;
     padding-top: 0.8em;
 }
@@ -812,7 +859,7 @@ article div {
 #aanmelden main label {
     display: flex;
     flex-direction: column;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     font-size: 1em;
     width: 100%;
 }
@@ -838,7 +885,7 @@ article div {
     border: 1.5px solid #AAB6C0;
     border-radius: 0.6em;
     padding: 0.5em 0.3em;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-size: 1.05em;
     margin: 0.5em 0em;
     color: gray;
@@ -846,7 +893,7 @@ article div {
 }
 
 #aanmelden main section a {
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-size: 0.9em;
     color: #2E0880;
     margin-bottom: 0.4em;
@@ -859,7 +906,7 @@ article div {
     border-radius: 1em;
     padding: 0.5em 3em;
     font-size: 1.2em;
-    font-family: Nexa Bold;
+    font-family: "Nexa Bold";
     margin: 0em;
     margin: 1em 0em;
     box-shadow: inset 0em -0.1875em 0.0625em #ca2b55;
@@ -886,7 +933,7 @@ article div {
 
 #aanmelden main section > p {
     text-align: center;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-size: 0.9em;
     color: #2E0880;
     margin-bottom: -1em;
@@ -983,7 +1030,7 @@ article div {
 
 main > button {
     border: 0px;
-    font-family: Nexa Light;
+    font-family: "Nexa Light";
     font-size: 1em;
     margin: 1em;
 }
