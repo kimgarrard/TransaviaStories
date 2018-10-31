@@ -1330,6 +1330,20 @@ main > button:nth-of-type(2) {
     }
 }
 
+@keyframes floatloadMobile {
+    100% {
+        transform: translate(1em, -52em);
+        width: 0.9em;
+    }
+}
+
+@keyframes floatloadTablet {
+    100% {
+        transform: translate(25em, -52em);
+        width: 0.9em;
+    }
+}
+
 #verhaal main button img:nth-of-type(4) {
     animation-duration: 1s;
     animation-name: floatload;
@@ -1354,6 +1368,11 @@ main > button:nth-of-type(2) {
         top: -0.1em;
         left: 54%;
         position: fixed;
+    }
+
+    #verhaal main button img:nth-of-type(4) {
+        animation-duration: 1s;
+        animation-name: floatloadMobile;
     }
 
     .droomdiv {
@@ -1398,6 +1417,20 @@ main > button:nth-of-type(2) {
 }
 
 @media(min-width: 48em) and (max-width: 79em) {
+
+    #verhaal main button img:nth-of-type(3) {
+        width: 1.9em;
+        z-index: 20;
+        top: -0.1em;
+        left: 76%;
+        position: fixed;
+    }
+
+    #verhaal main button img:nth-of-type(4) {
+        animation-duration: 1s;
+        animation-name: floatloadTablet;
+    }
+
     .droomdiv {
         height: 110em;
     }
