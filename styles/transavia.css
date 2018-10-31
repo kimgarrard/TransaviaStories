@@ -457,14 +457,15 @@ section > div fieldset label {
 .laden div:nth-of-type(3),
 .laden div:nth-of-type(4) {
     background: #2E0880;
-    height: 1.7em;
-    width: 0.8em;
+    height: 1.8em;
+    width: 0.6em;
     display: inline-block;
-    border: 1.5px solid white;
+    border: 1px solid white;
     border-radius: 0.1em;
     margin-top: 1.3em;
     margin-left: -0.1em;
-    animation: books 3s ease infinite;
+    animation: books 2s ease infinite;
+    z-index: 1;
 }
 
 .laden div:nth-of-type(5) {
@@ -486,10 +487,10 @@ section > div fieldset label {
     position: absolute;
     z-index: -1;
     top: 2px;
-    left: -0.1em;
+    left: -0.05em;
     right: -0.1em;
-    bottom: 1.02em;
-    border: 2px solid white;
+    bottom: 1.35em;
+    border: 1px solid gold;
     border-left-color: transparent;
     border-right-color: transparent;
 }
@@ -499,10 +500,10 @@ section > div fieldset label {
     content: " ";
     position: absolute;
     z-index: -1;
-    top: 18px;
+    top: 20px;
     left: -0.1em;
     right: -0.1em;
-    border: 2px solid white;
+    border: 1px solid gold;
     border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
@@ -515,14 +516,14 @@ section > div fieldset label {
     top: 0.6em;
     left: 0.1em;
     right: 0.1em;
-    bottom: 12px;
-    border: 2px solid white;
+    bottom: 13px;
+    border: 2px solid gold;
     border-radius: 1em;
 }
 
 .laden div:nth-of-type(2) {
     animation-delay: 0ms;
-    margin-left: 5.3em;
+    margin-left: 5.5em;
 }
 
 .laden div:nth-of-type(3) {
