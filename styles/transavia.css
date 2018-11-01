@@ -1354,6 +1354,46 @@ main > button:nth-of-type(2) {
     outline: none;
 }
 
+#verhaal button + form {
+    background-color: white;
+    padding: 1em;
+}
+
+#verhaal button + form h2 {
+    font-family: "Nexa Bold";
+    color: #2E0880;
+    margin: 0.5em 0 0.12em 0;
+    font-size: 1.5em;
+}
+
+#verhaal button + form div img {
+    width: 2em;
+    margin: 0em;
+}
+
+#verhaal textarea {
+    border: 1.5px solid #AAB6C0;
+    border-radius: 0.6em;
+    padding: 0.5em 0.3em;
+    font-family: "Nexa Light";
+    font-size: 1.05em;
+    margin: 0.5em 0em;
+    color: gray;
+}
+
+#verhaal input {
+    display: flex;
+    margin-top: 0em;
+    border-radius: 1em;
+    background-color: #46CD7A;
+    border: 2px solid #B5C1CB;
+    padding: 0.5em 0.8em;
+    border-radius: 0.5em;
+    color: white;
+    font-size: 1em;
+    font-family: "Nexa Bold";
+}
+
 @media(min-width: 20em) and (max-width: 47.9em) {
 
     #verhaal main section > img:nth-of-type(3) {
@@ -1390,7 +1430,7 @@ main > button:nth-of-type(2) {
 
     .tekst1 {
         width: 71%;
-        margin-top: 0em;
+        margin-top: -20%;
         margin-left: -5%;
     }
 
@@ -1445,7 +1485,7 @@ main > button:nth-of-type(2) {
 
     .tekst1 {
         width: 52%;
-        margin-top: 0em;
+        margin-top: -15%;
         margin-left: 3.1%;
     }
 
